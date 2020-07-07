@@ -134,6 +134,7 @@ class ProjFavi extends \ExternalModules\AbstractExternalModule {
         $pharma_alias_field = $this->getProjectSetting('pharma-alias-field');
         $pharma_alias_event = $this->getProjectSetting('pharma-alias-event');
         $pharma_alias_pid   = $this->getProjectSetting('pharma-alias-pid');
+        $pharma_batch_field = $this->getProjectSetting('pharma-batch-field');
 
         // Get the current alias
         $current_alias = $this->getValue($record, $pharma_alias_field, $pharma_alias_event);
@@ -174,11 +175,13 @@ class ProjFavi extends \ExternalModules\AbstractExternalModule {
             }
 
             // Save the alias to this record
-            $code = $result['code'];
+            $code   = $result['code'];
+            $batch  = $result['batch'];
             $data   = array(
                 $record => array(
                     $pharma_alias_event => array(
-                        $pharma_alias_field => $code
+                        $pharma_alias_field => $code,
+                        $pharma_batch_field => $batch
                     )
                 )
             );

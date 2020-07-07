@@ -60,22 +60,28 @@
             "type": "event-list"
         },
         {
+            "key": "pharma-alias-pid",
+            "name": "<b>Project where Pharma Alias database is stored</b>",
+            "required": true,
+            "type": "project-id"
+        },
+        {
+            "key": "pharma-alias-event",
+            "name": "<b>Event where Pharma Alias Data are stored</b>",
+            "required": true,
+            "type": "event-list"
+        },
+        {
             "key": "pharma-alias-field",
             "name": "<b>Pharma Alias Field</b><br>Store the newly assigned pharma alias in this field",
             "required": true,
             "type": "field-list"
         },
         {
-            "key": "pharma-alias-event",
-            "name": "<b>Event where Pharma Alias is stored</b>",
+            "key": "pharma-batch-field",
+            "name": "<b>Pharma Batch Field</b><br>Store the batch from the pharma table in this field",
             "required": true,
-            "type": "event-list"
-        },
-        {
-            "key": "pharma-alias-pid",
-            "name": "<b>Project where Pharma Alias database is stored</b>",
-            "required": true,
-            "type": "project-id"
+            "type": "field-list"
         },
 		{
 			"key": "enable-project-debug-logging",
